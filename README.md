@@ -76,9 +76,61 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
+Developed by:AMURTHA VAAHINI.KN
+Reg no:212222240008
+#define fsrpin A0
+#define led1 2
+#define led2 3
+#define led3 4
+#define led4 5
+#define led5 6
+#define led6 7
+
+
+int fsrreading;
+void setup()
+  {
+  
+  Serial.begin(9600);
+  
+  pinMode(led1,OUTPUT);
+  pinMode(led2,OUTPUT);
+  pinMode(led3,OUTPUT);
+  pinMode(led4,OUTPUT);
+  pinMode(led5,OUTPUT);
+  pinMode(led6,OUTPUT);  
+  } 
+
+void loop()
+{ 
+  fsrreading = analogRead(fsrpin);
+  Serial.println(fsrreading);
+  if (fsrreading > 150) {
+    digitalWrite(led1,HIGH);
+  }
+  else digitalWrite(led1, LOW);
+  if (fsrreading > 300) {
+    digitalWrite(led2, HIGH);
+  } 
+  else digitalWrite(led2,LOW);
+  if (fsrreading > 450) {
+    digitalWrite(led3, HIGH);
+  } 
+  else digitalWrite(led3,LOW);
+  if (fsrreading > 600) {
+    digitalWrite(led4, HIGH);
+  } 
+  else digitalWrite(led4,LOW);
+  if (fsrreading > 750) {
+    digitalWrite(led5, HIGH);
+  } 
+  else digitalWrite(led5,LOW);
+  if (fsrreading > 900) {
+    digitalWrite(led6, HIGH);
+  }
+  else digitalWrite(led6,LOW);
+  }
+
  
  
  
@@ -114,6 +166,14 @@ For those unfamiliar with summation notation, the equation above may seem daunti
 EX:           μ = (1+3+4+7+8) / 5 = 4.6        
 σ = √[(1 - 4.6)2 + (3 - 4.6)2 + ... + (8 - 4.6)2)]/5
 σ = √(12.96 + 2.56 + 0.36 + 5.76 + 11.56)/5 = 2.577
+
+###OUPUT
+BEFORE STIMULAION:
+![Screenshot (69)](https://github.com/amurthavaahininagarajan/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/118679102/3fea8a98-41d7-49e9-8f30-7a3e93a34fdf)
+
+AFTER SIMULATION:
+
+
 
 
 
